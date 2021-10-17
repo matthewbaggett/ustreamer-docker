@@ -10,7 +10,7 @@ RUN apt-get update && \
         libevent-dev \
         libjpeg8-dev \
         uuid-dev \
-        libbsd-dev 
+        libbsd-dev
 #        libraspberrypi-dev \
 #        wiringpi
 
@@ -19,7 +19,7 @@ RUN git clone --depth=1 https://github.com/pikvm/ustreamer
 WORKDIR /build/ustreamer/
 RUN make 
 
-FROM ubuntu:bionic AS run
+FROM ubuntu:focal AS run
 RUN apt-get update && \
     apt-get install -y \
         ca-certificates \
